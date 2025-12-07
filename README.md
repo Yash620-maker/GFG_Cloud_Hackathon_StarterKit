@@ -113,9 +113,9 @@ Judges (Pokémon Cloud League Panel) look for:
 ## How to Use This Repo
 
 1. **Fork** this repo into your own account.
-2. Create a new branch with your team name:
+2. Create a new branch with your roll number:
    ```bash
-   git checkout -b team-<your-team-name>
+   git checkout -b trainer-<your-roll-number>
     ```
 
 3. Pick a track:
@@ -125,7 +125,7 @@ Judges (Pokémon Cloud League Panel) look for:
    * `gym-challenge-starter/loadbalancer/`
    * `gym-challenge-starter/automation/`
 4. Start implementing from the TODOs and hints.
-5. Push regularly and use PRs / Issues like a real dev team.
+5. Push regularly and use PRs / Issues like a real dev.
 6. Document your final architecture in your track README.
 
 Good luck, Trainer. May your deployments always succeed on the first try. ✨

@@ -1,0 +1,43 @@
+name: PokéCI Example
+
+# on:
+#   push:
+#     branches:
+#       - main
+#       - master
+#   pull_request:
+
+# jobs:
+#   build-and-test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v4
+
+#       - name: Set up Python (example language)
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+
+#       - name: Install dependencies (if using Python)
+#         run: |
+#           if [ -f "requirements.txt" ]; then
+#             pip install -r requirements.txt
+#           fi
+
+#       - name: run tests (TODO: replace with your own)
+#         run: |
+#           echo "TODO: add your tests here"
+#           # pytest
+#           # npm test
+#           # go test ./...
+
+  # TODO: Add a deploy job for your chosen platform
+  # Example:
+  # deploy:
+  #   needs: build-and-test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to Render / Railway / Vercel / AWS
+  #       run: |
+  #         echo "TODO: implement deployment script or use provider's GitHub action"
