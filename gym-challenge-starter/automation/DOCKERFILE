@@ -1,0 +1,12 @@
+# version: "3.9"
+
+# services:
+#   stress-app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile # You can create one for cpu_stress_app.py
+#     ports:
+#       - "7000:7000"
+#     deploy:
+#       replicas: 1
+#       # TODO: integrate this with your auto-scaling logic or scripts
