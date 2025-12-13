@@ -1,15 +1,28 @@
-# Example Dockerfile for the PokéAPI sample.
+FROM maven:3.9.9-eclipse-temurin-17 AS build
 
-# FROM python:3.11-slim
+WORKDIR /app
 
-# WORKDIR /app
+COPY pom.xml .
 
-# COPY requirements.txt .
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN mvn dependency:go-offline
 
-# COPY . .
+COPY src ./src
 
-# ENV PORT=8000
-# EXPOSE 8000
+RUN mvn clean package -DskipTests
 
-# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY --from=build /app/target/*.jar app.jar
+
+EXPOSE 8000
+
+ENTRYPOINT ["java","-jar","app.jar"] 
+
+
+
+
+
