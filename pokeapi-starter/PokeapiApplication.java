@@ -1,14 +1,22 @@
 package com.example.pokeapi;
 
 import java.time.LocalDateTime;
+//Used to get the current date and time
 import java.util.HashMap;
 import java.util.Map;
+//Map → stores key–value pairs
+//HashMap → implementation of Map
 import java.util.concurrent.atomic.AtomicInteger;
-
+//Used to count total HTTP requests safely
+//A thread-safe counter
+//Used to count total HTTP requests safely
 import org.springframework.boot.SpringApplication;
+//@SpringBootApplication= @configure + @Enableautoconfigration + @componentscan
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+//The part after /pokemon/, /echo/, or /user/ changes every request.
+//@PathVariable captures that changing value.
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -17,6 +25,8 @@ public class PokeapiApplication {
 
     private final AtomicInteger requestCount = new AtomicInteger(0);
     private final LocalDateTime startTime = LocalDateTime.now();
+    //private means:This variable can be accessed only inside this class.
+    //final means:The variable cannot be reassigned after it is initialized.
 
     public static void main(String[] args) {
         SpringApplication.run(PokeapiApplication.class, args);
@@ -80,3 +90,8 @@ public class PokeapiApplication {
         );
     }
 }
+
+//git status
+//git add filename1 filename2
+//git commit 
+//git push origin main
